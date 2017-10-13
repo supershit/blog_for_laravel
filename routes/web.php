@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/layout','AdminController@layout');
+
+Route::get('/categorylist','AdminController@categorylist');
+
+Route::get('/categoryadd','AdminController@categoryadd');
