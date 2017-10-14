@@ -10,22 +10,32 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(array('middleware'=>'login'),function () {
+		Route::get('/categorylist','CategoryController@categorylist');
 
-Route::get('/', function () {
-    return view('welcome');
+		Route::get('/categoryadd','CategoryController@categoryadd');
+
+		Route::post('/categoryadd','CategoryController@categoryadd');
+
+		Route::any('/categoryedit/{id}','CategoryController@categoryedit');
+
+		Route::any('/postadd','PostController@postadd');
+
+		Route::get('/postlist','PostController@postlist');
+
+		Route::any('/postedit/{id}','PostController@postedit');
+
+		Route::get('/', function () {
+    		return redirect('/postlist');
+		});
 });
+
+
+
 Route::get('/layout','CategoryController@layout');
 
-Route::get('/categorylist','CategoryController@categorylist');
 
-Route::get('/categoryadd','CategoryController@categoryadd');
 
-Route::post('/categoryadd','CategoryController@categoryadd');
+Route::any('/login','AdminController@login');
 
-Route::any('/categoryedit/{id}','CategoryController@categoryedit');
-
-Route::any('/postadd','PostController@postadd');
-
-Route::get('/postlist','PostController@postlist');
-
-Route::any('/postedit/{id}','PostController@postedit');
+Route::get('/logout','AdminController@logout');
