@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="./admins/i/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="./admins/i/app-icon72x72@2x.png">
+    <link rel="icon" type="image/png" href="/admins/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/admins/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <link rel="stylesheet" href="./admins/css/amazeui.min.css" />
-    <link rel="stylesheet" href="./admins/css/admin.css">
-    <link rel="stylesheet" href="./admins/css/app.css">
-    <script src="./admins/js/echarts.min.js"></script>
+    <link rel="stylesheet" href="/admins/css/amazeui.min.css" />
+    <link rel="stylesheet" href="/admins/css/admin.css">
+    <link rel="stylesheet" href="/admins/css/app.css">
+    <script src="/admins/js/echarts.min.js"></script>
 </head>
 
 <body data-type="index">
@@ -41,7 +41,7 @@
 
                 <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
                     <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
-                        <span class="tpl-header-list-user-nick">禁言小张</span><span class="tpl-header-list-user-ico"> <img src="./admins/img/user01.png"></span>
+                        <span class="tpl-header-list-user-nick">禁言小张</span><span class="tpl-header-list-user-ico"> <img src="/admins/img/user01.png"></span>
                     </a>
                     <ul class="am-dropdown-content">
 <!--                         <li><a href="#"><span class="am-icon-bell-o"></span> 资料</a></li>
@@ -79,13 +79,13 @@
                         </a>
                         <ul class="tpl-left-nav-sub-menu" style="display: block;">
                             <li>
-                                <a href="categorylist">
+                                <a href="/categorylist">
                                     <i class="am-icon-angle-right"></i>
                                     <span>分类列表</span>
                                     
                                 </a>
 
-                                <a href="categoryadd">
+                                <a href="/categoryadd">
                                     <i class="am-icon-angle-right"></i>
                                     <span>分类添加</span>
                                 </a>
@@ -93,6 +93,28 @@
                         </ul>
                     </li>
 
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-wpforms"></i>
+                            <span>博客文章管理</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right tpl-left-nav-more-ico-rotate"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" style="display: block;">
+                            <li>
+                                <a href="/postlist">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>文章列表</span>
+                                    
+                                </a>
+
+                                <a href="/postadd">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>文章添加</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                
 
                 </ul>
             </div>
@@ -106,6 +128,9 @@
             <div class="tpl-content-page-title">
                <h1>@yield('menu')</h1>
             </div>
+            @if(session("info"))    
+             <span style="color: red">{{session('info')}}</span>
+            @endif  
 
             @section('content')
             @show()
@@ -113,10 +138,10 @@
             
 
 
-    <script src="./admins/js/jquery.min.js"></script>
-    <script src="./admins/js/amazeui.min.js"></script>
-    <script src="./admins/js/iscroll.js"></script>
-    <script src="./admins/js/app.js"></script>
+    <script src="/admins/js/jquery.min.js"></script>
+    <script src="/admins/js/amazeui.min.js"></script>
+    <script src="/admins/js/iscroll.js"></script>
+    <script src="/admins/js/app.js"></script>
 </body>
 
 </html>

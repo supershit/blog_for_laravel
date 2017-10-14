@@ -19,3 +19,11 @@ Route::get('/layout','AdminController@layout');
 Route::get('/categorylist','AdminController@categorylist');
 
 Route::get('/categoryadd','AdminController@categoryadd');
+
+Route::post('/categoryadd','AdminController@categoryadd');
+
+Route::any('/categoryedit/{id}','AdminController@categoryedit');
+
+Route::any('/postadd','PostController@postadd');
+
+Route::get('/postlist','PostController@postlist');
