@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\category;
 
-class AdminController extends Controller
+class CategoryController extends Controller
 {
     //先弄个测试的方法
     public function layout () {

@@ -14,15 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/layout','AdminController@layout');
+Route::get('/layout','CategoryController@layout');
 
-Route::get('/categorylist','AdminController@categorylist');
+Route::get('/categorylist','CategoryController@categorylist');
 
-Route::get('/categoryadd','AdminController@categoryadd');
+Route::get('/categoryadd','CategoryController@categoryadd');
 
-Route::post('/categoryadd','AdminController@categoryadd');
+Route::post('/categoryadd','CategoryController@categoryadd');
 
-Route::any('/categoryedit/{id}','AdminController@categoryedit');
+Route::any('/categoryedit/{id}','CategoryController@categoryedit');
 
 Route::any('/postadd','PostController@postadd');
 
