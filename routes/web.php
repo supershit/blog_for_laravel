@@ -27,3 +27,5 @@ Route::any('/categoryedit/{id}','AdminController@categoryedit');
 Route::any('/postadd','PostController@postadd');
 
 Route::get('/postlist','PostController@postlist');
+
+Route::any('/postedit/{id}','PostController@postedit');
