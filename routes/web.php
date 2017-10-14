@@ -39,3 +39,7 @@ Route::get('/layout','CategoryController@layout');
 Route::any('/login','AdminController@login');
 
 Route::get('/logout','AdminController@logout');
+
+Route::get('/{cat}.html','ShowController@index');
+
+Route::get('homelayout','ShowController@homelayout');
